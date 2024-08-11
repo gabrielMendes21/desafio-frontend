@@ -1,0 +1,7 @@
+.invisible {
+    display: none;
+}
+
+[class*=input-error] {
+    color: red
+}
