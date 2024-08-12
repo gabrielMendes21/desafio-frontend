@@ -5,6 +5,7 @@ export default async function searchCEP(event) {
         
         return dados;
     } catch(err) {
+        event.target.value = ""
         console.log({
             msg: "Erro ao buscar CEP",
             err

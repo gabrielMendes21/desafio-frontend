@@ -3,14 +3,11 @@ export default function handleSubmit(event, products, attachments) {
     // Evitar o comportamento padrão do formulário (envio dos dados e recarregamento da página)
     event.preventDefault();
 
-    if (products.length === 0) {
-        document.querySelector(".no-products-added").classList.remove("invisible")
-    } if (attachments.length === 0) {
-        document.querySelector(".no-attachments-added").classList.remove("invisible");
+    if (products.length === 0 || attachments.length === 0) {
+        document.querySelector(".nothing-added").classList.remove("invisible");
     } else {
         // Remover as mensagens de erro, caso apareçam
-        document.querySelector(".no-products-added").classList.add("invisible");
-        document.querySelector(".no-attachments-added").classList.add("invisible");
+        document.querySelector(".nothing-added").classList.add("invisible");
         
         // Tratamento dos campos do formulário
         const formData = new FormData(event.currentTarget);
