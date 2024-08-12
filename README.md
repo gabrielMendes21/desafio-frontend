@@ -2,14 +2,15 @@
 
 Essa é a solução para o desafio front-end proposto pela @VFLOWS
 
-## Table of contents
+## Conteúdo
 
 - [Visão geral](#visão-geral)
   - [O desafio](#o-desafio)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [O processo](#my-process)
+- [O processo](#o-processo)
   - [Desenvolvido com](#desenvolvido-com)
+- [Editando o projeto](#editando-o-projeto)
 
 ## Visão geral
 
@@ -39,3 +40,13 @@ O usuário deve ser capaz de:
 - CSS
 - JavaScript
 - ViaCEP API
+
+- ## Editando o projeto
+
+Para editar o projeto basta clonar o repositório abrindo o seu temrinal e rodando o comando:
+`git clone https://github.com/gabrielMendes21/desafio-frontend.git`
+
+Depois, acesse o repositório clonado:
+`cd desafio-frontend/`
+
+Caso você tenha algum erro de CORS, recomendo que instale a extensão `Live server` para rodar o projeto em um servidor local.
