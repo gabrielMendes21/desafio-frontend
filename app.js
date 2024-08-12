@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Campos do formulário
     const cep = document.getElementById("cep");
     const addAttachmentButton = document.getElementById("novo-anexo");
+    const teste = document.querySelector("#novo-anexo");
     // const cnpj = document.getElementById("cnpj");
     // const phone = document.getElementById("telefone");
 

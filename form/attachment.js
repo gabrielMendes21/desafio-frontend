@@ -26,8 +26,10 @@ export default function addAttachment(event, attachments) {
             newAttachment.dataset.id = fileId;
             newAttachment.innerHTML = `
                 <li>
-                    <button type="button" id="remove-attachment-${fileId}">Excluir anexo</button>
-                    <a href="${url}" download="${newFile.name}">Ver anexo</a>
+                    <img src="../assets/garbage-icon.svg" id="excluir-anexo-${fileId}">
+                    <a href="${url}" download="${newFile.name}">
+                        <img src="../assets/view-icon.svg">
+                    </a>
                     
                     <span>${newFile.name}</span>
                 </li>
@@ -37,7 +39,7 @@ export default function addAttachment(event, attachments) {
             attachmentList.appendChild(newAttachment);
             
             // Adição do evento para a remoção do anexo
-            document.getElementById(`remove-attachment-${fileId}`).addEventListener("click", () => removeAttachment(fileId, url, attachments));
+            document.getElementById(`excluir-anexo-${fileId}`).addEventListener("click", () => removeAttachment(fileId, url, attachments));
 
             // Armazenar o arquivo no session storage
             sessionStorage.setItem(fileId, JSON.stringify({fileName, fileData}));
@@ -53,18 +55,19 @@ export default function addAttachment(event, attachments) {
 function removeAttachment(id, url, attachments) {
     // Remoção do session storage
     sessionStorage.removeItem(id);
-
+    
     // Liberação da memória
     URL.revokeObjectURL(url);
-
+    
     // Remoção do elemento HTML
-    const attachment = document.querySelector(`[data-id="${id}"]`);
-    if (attachment) {
-        attachment.remove();
+    const attachmentElement = document.querySelector(`[data-id="${id}"]`);
+    if (attachmentElement) {
+        attachmentElement.remove();
     }
 
     // Remoção dos dados do arquivo do vetor de anexos
-    attachments.splice(attachments.indexOf(attachment.id), 1);
+    const attachment = attachments.find(att => att.fileId === id);
+    attachments.splice(attachments.indexOf(attachment), 1);
 
     // Limpa o valor do input para adições posteriores
     document.getElementById("novo-anexo").value = ""

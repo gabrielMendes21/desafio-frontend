@@ -1,3 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font: 16px Arial, sans-serif;
+}
+
+.container {
+    padding: 2rem min(80%, 15rem);
+}
+
+h1 {
+    text-align: center;
+}
+
+[class$="added"] {
+    color: red;
+    font-weight: bold;
+}
+
+/* Formulario */
+fieldset {
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-top: 1.5rem solid #0584b4;
+    position: relative;
+}
+
+fieldset:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: .5rem;
+}
+
+legend {
+    position: absolute;
+    top: -1.5rem;
+    left: 1rem;
+    color: white;
+    background-color: #0584b4;
+    font-weight: 600;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+}
+
+.field {
+    display: inline-block;
+}
+
+.full-width-field {
+    grid-column: span 4;
+}
+
+.large-field {
+    grid-column: span 3;
+}
+
+.medium-field {
+    grid-column: span 1;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+}
+
+input, select {
+    padding: .5rem .2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+/* Campos do produto */
+.product {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.product > img:hover {
+    cursor: pointer;
+    filter: brightness(105%);
+}
+
+.product span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product > div {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product > div > div {
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+}
+
+.product > div > div > div:first-child {
+    width: min-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product > div > div > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.product > div > div div:last-child div:first-child {
+    grid-column: span 2;    
+}
+
+.product img {
+    width: 3rem;
+}
+
+button:not([id*="excluir-anexo"]), [for="novo-anexo"] {
+    width: 100%;
+    text-align: center;
+    background-color: #119517;
+    border-radius: 5px;
+    padding: .5rem;
+    font-weight: bold;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem ;
+}
+
+button:hover, [for="novo-anexo"]:hover {
+    cursor: pointer;
+    filter: brightness(105%);
+    transition: .3s;
+}
+
+
+.anexos {
+    border: 1px solid black;
+    padding: .8rem .8rem 0;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.anexos > span {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    font-weight: bold;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+li img {
+    margin-right: .5rem;
+}
+
+li span {
+    margin-left: 1rem;
+}
+
+a[download] {
+    height: 24px;
+}
+
+[id*="excluir-anexo"], a[download] > img {
+    width: 24px;
+}
+
 .invisible {
     display: none;
 }

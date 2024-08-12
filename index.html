@@ -18,53 +18,82 @@
             <fieldset class="supplier-data">
                 <legend>Dados do fornecedor</legend>
 
-                <label for="razao-social">Razão social</label>
-                <input type="text" name="razao-social" id="razao-social" required>
+                <div class="field large-field">
+                    <label for="razao-social">Razão social</label>
+                    <input type="text" name="razao-social" id="razao-social" >
+                </div>
                 
-                <label for="cnpj">CNPJ</label>
-                <input type="text" name="cnpj" id="cnpj" required>
+                <div class="field medium-field">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" name="cnpj" id="cnpj" >
+                </div>
                 
-                <label for="nome-fantasia">Nome fantasia</label>
-                <input type="text" name="nome-fantasia" id="nome-fantasia" required>
+                <div class="field large-field">
+                    <label for="nome-fantasia">Nome fantasia</label>
+                    <input type="text" name="nome-fantasia" id="nome-fantasia" >
+                </div>
 
-                <label for="inscricao-estadual">Inscrição estadual</label>
-                <input type="text" name="inscricao-estadual" id="inscricao-estadual">
+                <div class="field medium-field">
+                    <label for="inscricao-estadual">Inscrição estadual</label>
+                    <input type="text" name="inscricao-estadual" id="inscricao-estadual">
+                </div>
 
-                <label for="cep">CEP</label>
-                <input type="text" name="cep" id="cep" required>
+                <div class="field medium-field">
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" >
+                    <!-- Mensagem de erro para o campo CEP -->
+                    <span class="invisible cep-input-error">Erro ao buscar CEP. Verifique se o CEP está correto e tente novamente</span>
+                </div>
 
-                <!-- Mensagem de erro para o campo CEP -->
-                <span class="invisible cep-input-error">Erro ao buscar CEP. Verifique se o CEP está correto e tente novamente</span>
+                <div class="field medium-field">
+                    <label for="inscricao-municipal">Inscrição municipal</label>
+                    <input type="text" name="inscricao-municipal" id="inscricao-municipal">
+                </div>
 
-                <label for="inscricao-municipal">Inscrição municipal</label>
-                <input type="text" name="inscricao-municipal" id="inscricao-municipal">
+                <div class="field large-field">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" readonly>
+                </div>
 
-                <label for="endereco">Endereço</label>
-                <input type="text" name="endereco" id="endereco" readonly>
+                <div class="field medium-field">
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="numero" >
+                </div>
 
-                <label for="numero">Número</label>
-                <input type="text" name="numero" id="numero" required>
+                <div class="field full-width-field">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" name="complemento" id="complemento">
+                </div>
 
-                <label for="complemento">Complemento</label>
-                <input type="text" name="complemento" id="complemento">
+                <div class="field medium-field">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" readonly>
+                </div>
 
-                <label for="bairro">Bairro</label>
-                <input type="text" name="bairro" id="bairro" readonly>
+                <div class="field medium-field">
+                    <label for="municipio">Município</label>
+                    <input type="text" name="municipio" id="municipio" readonly>
+                </div>
 
-                <label for="municipio">Município</label>
-                <input type="text" name="municipio" id="municipio" readonly>
+                <div class="field medium-field">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" readonly>
+                </div>
 
-                <label for="estado">Estado</label>
-                <input type="text" name="estado" id="estado" readonly>
+                <div class="field medium-field">
+                    <label for="nome-do-contato">Nome da pessoa de contato</label>
+                    <input type="text" name="nome-do-contato" id="nome-do-contato" autocomplete="name" >
+                </div>
 
-                <label for="nome-do-contato">Nome da pessoa de contato</label>
-                <input type="text" name="nome-do-contato" id="nome-do-contato" autocomplete="name" required>
+                <div class="field medium-field">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" id="telefone" >
+                </div>
 
-                <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" id="telefone" required>
-
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" autocomplete="email" required>
+                <div class="field medium-field">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" autocomplete="email" >
+                </div>
             </fieldset>
 
             <!-- Produtos -->
@@ -73,12 +102,13 @@
 
                 <button type="button" id="add-product">Adicionar produto</button>
             </fieldset>
+            <span class="invisible no-products-added">* Adicione ao menos um produto</span>
 
             <!-- Anexos -->
             <fieldset class="attachments">
                 <legend>Anexos</legend>
                 
-                <div class="anexo">
+                <div class="anexos">
                     <span>Itens</span>
 
                     <ul id="attachments-list">
@@ -89,6 +119,7 @@
                 <label for="novo-anexo">Incluir anexo</label>
                 <input type="file" id="novo-anexo" hidden>
             </fieldset>
+            <span class="invisible no-attachments-added">* Adicione ao menos um anexo</span>
 
             <button type="submit">Incluir fornecedor</button>
         </form>
