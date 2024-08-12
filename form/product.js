@@ -13,12 +13,12 @@ export default function addProduct(event, products) {
     newProduct.classList.add("product");
     newProduct.dataset.id = id;
     newProduct.innerHTML = `
-        <img class="remove-product-${id}" src="../assets/garbage-icon.svg">
+        <img class="remove-product-${id}" src="assets/garbage-icon.svg">
         <div>
             <span>Produto - ${id}</span>
             <div>
                 <div> 
-                    <img src="../assets/box-icon.svg">
+                    <img src="assets/box-icon.svg">
                 </div>
 
                 <div>

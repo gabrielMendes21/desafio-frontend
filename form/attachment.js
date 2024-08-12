@@ -26,9 +26,9 @@ export default function addAttachment(event, attachments) {
             newAttachment.dataset.id = fileId;
             newAttachment.innerHTML = `
                 <li>
-                    <img src="../assets/garbage-icon.svg" id="excluir-anexo-${fileId}">
+                    <img src="assets/garbage-icon.svg" id="excluir-anexo-${fileId}">
                     <a href="${url}" download="${newFile.name}">
-                        <img src="../assets/view-icon.svg">
+                        <img src="assets/view-icon.svg">
                     </a>
                     
                     <span>${newFile.name}</span>
