@@ -31,7 +31,7 @@ O usuário deve ser capaz de:
 
 - URL da página: [gabrielmendes21.github.io/desafio-frontend](https://gabrielmendes21.github.io/desafio-frontend/)
 
-## Meu processo
+## O processo
 
 ### Desenvolvido com
 
