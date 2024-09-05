@@ -10,7 +10,7 @@ Essa é a solução para o desafio front-end proposto pela @VFLOWS
   - [Links](#links)
 - [O processo](#o-processo)
   - [Desenvolvido com](#desenvolvido-com)
-- [Editando o projeto](#editando-o-projeto)
+- [Editando / corrigindo o projeto](#editando-o-projeto)
 
 ## Visão geral
 

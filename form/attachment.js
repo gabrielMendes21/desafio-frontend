@@ -45,7 +45,7 @@ export default function addAttachment(event, attachments) {
             sessionStorage.setItem(fileId, JSON.stringify({fileName, fileData}));
         });
 
-        // Ler o arquivo como Data URL
+        // Ler o arquivo como DataURL
         reader.readAsDataURL(newFile);
         
     }

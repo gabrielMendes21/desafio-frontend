@@ -40,7 +40,7 @@ export default function addProduct(event, products) {
                     </div>
 
                     <div class="field">
-                        <label for="qtd-estoque-${id}" ">QTDE. em estoque</label>
+                        <label for="qtd-estoque-${id}">QTDE. em estoque</label>
                         <input type="number" name="qtd-estoque" id="qtd-estoque-${id}" required>
                     </div>
 
